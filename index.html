@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulyator</title>
+  </head>
+  <body>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            min-height: 100vh;
+            background: #dde3ea;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .calculator{
+            width: 320px;
+            background: black;
+            box-shadow: 0 18px 40px rgba(22, 35, 59, 0.35);
+            border-radius: 5%;
+            padding: 20px 10px 20px 10px;
+        }
+
+        .forjs{
+            background-color: #232730;  
+            border-radius: 14px;
+            padding: 10px 14px 14px;
+            margin-bottom: 20px;         
+            color: #e8eef7;
+            text-align: right;
+            overflow: hidden;
+        }
+
+        .next{
+            min-height: 20px;
+            font-size: 20px;
+            color: #8fa3c4;
+        }
+
+        #tvman{
+            font-size: 35px;
+            font-weight: 600;
+            font-variant-numeric: tabular-nums;
+            white-space: nowrap;
+        }
+
+        .tugmalar{
+            display: grid;
+            grid-template-columns: repeat(4, 2fr);
+            gap: 15px;
+            position: relative;
+            right: 0px;
+        }
+
+        .tugma{
+            padding: 15px 20px;
+            font-size: 19px;
+            font-weight: 600;
+            color: white;
+            background-color: #16233b;
+            border-radius: 20%;
+        }
+
+        .tugma:hover{
+            background-color: #8fa3c4;
+            color: orangered;
+
+        }
+
+        .tvman{
+            font-size: 36px;
+            color: orangered;
+        }
+
+        .teng{
+            background-color: orangered;
+            color: black;
+            grid-row: span 2;
+            border-radius: 10px;
+        }
+
+        .nol{
+            grid-column: span 2;
+            border-radius: 10px;
+        }
+
+        .amal{
+            background-color: rgb(54, 54, 137);
+        }
+
+        .delete{
+            background-color: #4A0A14;
+            color: rgb(171, 100, 100);
+        }
+
+    </style>
+    <div class="calculator">
+        <div class="forjs">
+            <div id="next" class="next"></div>
+            <div id="tvman" class="tvman">0</div>
+        </div>
+        <div class="tugmalar">
+            <button class="tugma delete" id="ochir">C</button>
+            <button class="tugma delete" id="bochir">⌫</button>
+            <button class="tugma amal" id="bol">÷</button>
+            <button class="tugma amal" id="kopaytir">X</button>
+            <button class="tugma" data-number="1">1</button>
+            <button class="tugma" data-number="2">2</button>
+            <button class="tugma" data-number="3">3</button>
+            <button class="tugma amal" id="ayir">-</button>
+            <button class="tugma" data-number="4">4</button>
+            <button class="tugma" data-number="5">5</button>
+            <button class="tugma" data-number="6">6</button>
+            <button class="tugma amal" id="qosh">+</button>
+            <button class="tugma" data-number="7">7</button>
+            <button class="tugma" data-number="8">8</button>
+            <button class="tugma" data-number="9">9</button>
+            <button class="tugma teng" id="teng">=</button>
+            <button class="tugma nol" data-number="0">0</button>
+            <button class="tugma" id="nuqta">.</button>
+        </div>
+    </div>
+  <script src="index.js"></script>
+</body>
+</html>
